@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Kanit:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    color: white;   
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    background-color: aquamarine;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(images/backg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    perspective: 1000;
+}
+
+.container .wrapper{
+    width: 24rem;
+    height: 15rem;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.container .wrapper:hover{
+    transform: rotateY(180deg);
+}
+
+.container .card{
+    border: 0.1px solid rgba(250, 239, 239, 0.5);
+    width: 100%;
+    height: 100%;
+    border-radius: 0.9rem;
+    background-color : rgba(250, 239, 239, 0.5);
+    display: flex;  
+    flex-direction: column;
+    backdrop-filter: blur(7px);
+    backface-visibility: hidden;
+}
+
+.container .wrapper .front{
+    position: absolute;
+    z-index: 1;
+}
+
+
+
+.container .card .branding{
+    padding: 0.7rem 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .card .branding .b-wrap{
+    display: flex;
+    align-items: center;
+}
+
+.container .card .branding .b-wrap img{
+    width: 6em;
+    height: 4em;
+}
+
+.container .card .branding .b-wrap h1{
+    font-size: 1.2rem;
+}
+
+.container .card .branding img{
+    width: 5em;
+    height: 4em;
+    filter: contrast(30px) brightness(50px);
+}
+
+.container .card .c-data{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:0 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.container .card .c-data h2{
+    font-size: 0.75rem;
+    margin-bottom: 0.4rem;
+}
+
+.container .card .c-data p{
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.container .card .c-name{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    padding: 0 1.2rem;
+}
+
+.container .card .c-name h2{
+    font-size: 1.2rem;
+}
+
+.container .card .c-name .c-valid h2{
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem ;
+}
+
+.container .card .c-name .c-valid p{
+    font-size: 0.9rem;
+}
+
+.container .wrapper .back{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    transform: rotateY(180deg);
+}
+
+.container .wrapper .back h1{
+    width: 100%;  
+    font-size: 0.5rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.3rem;
+    text-align: center;
+}
+
+.container .wrapper .back .magnatic{
+    width: 100%;
+    height: 3rem;
+    background-color: #000;
+}
+
+.container .wrapper .back .cvv{
+    width: 75%;
+    height: 2.5rem;
+    border-radius: 0.2rem;
+    background-color: white;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 1.3rem;
+    margin-left:2rem;
+    background: repeating-linear-gradient( #fff, #fff 3px, #efefef 0px, #efefef 9px );
+}
+
+.container .wrapper .back .cvv span{
+    color: black;
+    font-size: 0.8rem;
+    margin-right: -1.9rem;
+    padding:0.3rem;
+    border-radius: 0.2rem;
+    background-color: #fff;
+}
+
+.container .wrapper .back p{
+    font-size: 0.7rem;
+    padding: 0.8rem 1.4rem;
+}
+
+/* Media Queries */
+
+@media screen and (max-width:410px) {
+    html{
+        font-size: 14px;
+    }   
+}
+
+@media screen and (max-width:320px) {
+    html{
+        font-size: 12px;
+    }   
+}
